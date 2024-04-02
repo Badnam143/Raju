@@ -46,7 +46,7 @@ def circle(pfp, size=(500, 500)):
 
 
 def welcomepic(pic, user, chatname, id, uname):
-    background = Image.open("AnonXMusic/assets/dil (1).png")
+    background = Image.open("AnonXMusic/assets/dil.png")
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
     pfp = pfp.resize((1157, 1158))
@@ -77,7 +77,7 @@ async def greet_group(_, member: ChatMemberUpdated):
             user.photo.big_file_id, file_name=f"pp{user.id}.png"
         )
     except AttributeError:
-        pic = "AarohiX/assets/dil.png"
+        pic = "AnonXMusic/assets/dil.png"
     if (temp.MELCOW).get(f"welcome-{member.chat.id}") is not None:
         try:
             await temp.MELCOW[f"welcome-{member.chat.id}"].delete()
@@ -92,11 +92,20 @@ async def greet_group(_, member: ChatMemberUpdated):
             photo=welcomeimg,
             caption=f"""
 Wᴇʟᴄᴏᴍᴇ Tᴏ {member.chat.title}
-➖➖➖➖➖➖➖➖➖➖➖➖
+
 Nᴀᴍᴇ ✧ {user.mention}
 Iᴅ ✧ {user.id}
 Usᴇʀɴᴀᴍᴇ ✧ @{user.username}
-➖➖➖➖➖➖➖➖➖➖➖➖
+🔒➖☆𝐍𝐨 𝐏𝐞𝐫𝐦𝐢𝐬𝐬𝐢𝐨𝐧 𝐍𝐨 𝐏𝐦
+🔒➖☆𝐃𝐨𝐧'𝐭 𝐅𝐢𝐠𝐡𝐭
+🔒➖☆𝐑𝐞𝐬𝐩𝐞𝐜𝐭 𝐄𝐚𝐜𝐡 𝐎𝐭𝐡𝐞𝐫
+🔒➖☆𝐔𝐬𝐞 𝐄𝐧𝐠𝐥𝐢𝐬𝐡 𝐀𝐧𝐝 𝐇𝐢𝐧𝐝i
+🔒➖☆𝐃𝐈𝐒𝐑𝐄𝐒𝐏𝐄𝐂𝐓
+🔒➖☆𝐍𝐨 𝟏𝟖+ 𝐓𝐡𝐢𝐧𝐠𝐬
+24/7 ＡＣＴＩＶＥ ＣＨＡＴ
+      💫GIVE RESPECT
+             TAKE RESPECT 💜
+
 """,
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"⦿ ᴀᴅᴅ ᴍᴇ ⦿", url=f"https://t.me/Alone_Dil_bot?startgroup=true")]])
         )
@@ -120,3 +129,4 @@ ID: {message.chat.id}
 USERNAME: @{message.chat.username}
 ➖➖➖➖➖➖➖➖➖➖➖➖
 """)
+                      
